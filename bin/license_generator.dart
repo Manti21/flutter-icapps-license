@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'src/license_generator.dart';
 import 'src/model/exception/fatal_exception.dart';
@@ -12,5 +13,6 @@ Future<void> main(List<String> args) async {
     Logger.logInfo('Failed to complete the license generator, because of $e');
     Logger.logError(e);
     Logger.logStacktrace(trace);
+    exit(1);
   }
 }
